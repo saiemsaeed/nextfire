@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
-// import { UserContext } from '../lib/context';
+import { UserContext } from '../lib/context';
 // import { auth } from '../lib/firebase';
 
 // Top navbar
 function NavBar() {
-  const { user = null, username = null } = {};
+  const { user, username } = useContext(UserContext);
 
   const router = useRouter();
 
